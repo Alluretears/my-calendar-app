@@ -1,0 +1,62 @@
+.year {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.month {
+  width: 22%;
+  padding-bottom: 48px;
+}
+
+.month-name {
+  color: #fa5550;
+  font-size: 20px;
+  text-align: left;
+  padding-left: 10px;
+  padding-bottom: 15px;
+}
+
+.day-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.day {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  color: #8a8b8b;
+}
+
+.date-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.date {
+  width: 30px;
+  height: 30px;
+  background: white;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+}
+
+.date.in-month:hover {
+  cursor: pointer;
+  background: #fa5550;
+  color: white;
+}
+
+.today {
+  background: #fa5550;
+  color: white;
+}
+
+.date.prev-month,
+.date.next-month {
+  color: #c5c5c5;
+}
