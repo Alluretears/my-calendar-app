@@ -3,6 +3,7 @@
 }
 .Calendar {
   margin: 0 5%;
+
   .rbc-month-view {
     min-height: 75vh;
     .rbc-month-header {
@@ -11,24 +12,45 @@
       }
     }
   }
+
   .rbc-date-cell {
     padding-top: 8px;
     padding-right: 8px;
     padding-left: 8px;
   }
+
   .rbc-now {
     font-weight: normal;
   }
+
   .rbc-time-header-cell {
     min-height: auto;
     .rbc-header {
       padding: 8px 0;
     }
   }
+
+  .rbc-time-view {
+    .rbc-time-slot {
+      flex: 0 1 auto;
+      .rbc-label {
+        color: #c9c9c9;
+        font-size: 10px;
+      }
+    }
+  }
+
+  .rbc-time-header-gutter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .rbc-current-time-indicator {
     background-color: #fa5550;
   }
 }
+
 .month-lunar-day {
   float: left;
 }
@@ -61,4 +83,8 @@
   font-size: 16px;
   background: #fa5550;
   color: white;
+}
+.time-gutter-header {
+  color: #c9c9c9;
+  font-size: 12px;
 }

@@ -92,13 +92,23 @@ function App() {
     );
   };
 
+  const customTimeGutterHeader = () => (
+    <div className={"time-gutter-header"}>全天</div>
+  );
+
+  const customTimeSlotWrapper = (timeSlotWrapperProps) => {
+    return <div> {timeSlotWrapperProps.children}</div>;
+  };
+
   const components = {
     toolbar: Toolbar,
-    week: {
-      header: customWeekHeader,
-    },
+    timeGutterHeader: customTimeGutterHeader,
+    timeSlotWrapper: customTimeSlotWrapper,
     month: {
       dateHeader: customDateHeader,
+    },
+    week: {
+      header: customWeekHeader,
     },
   };
 
