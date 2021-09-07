@@ -1,0 +1,58 @@
+.App {
+  text-align: center;
+}
+.Calendar {
+  margin: 0 5%;
+  .rbc-month-view {
+    min-height: 75vh;
+  }
+  .rbc-date-cell {
+    padding-top: 8px;
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+  .rbc-now {
+    font-weight: normal;
+  }
+  .rbc-time-view {
+    .rbc-time-slot {
+      flex: 0 1 auto;
+      .rbc-label {
+        color: #c9c9c9;
+        font-size: 10px;
+      }
+    }
+  }
+
+  .rbc-time-header-gutter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .rbc-current-time-indicator {
+    background-color: #fa5550;
+  }
+}
+.month-lunar-day {
+  float: left;
+}
+
+.month-today {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 25px;
+  border-radius: 50px;
+  border: none;
+  font-size: 16px;
+  background: #fa5550;
+  color: white;
+  margin-right: -1px;
+}
+
+.time-gutter-header {
+  color: #c9c9c9;
+  font-size: 12px;
+}
