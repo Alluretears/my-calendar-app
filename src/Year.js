@@ -152,6 +152,6 @@ Year.navigate = (date, action) => {
   }
 };
 
-Year.title = (date, { localizer }) => localizer.format(date, "YYYY");
+Year.title = (date, { localizer }) => localizer.format(date, "YYYY年");
 
 export default Year;

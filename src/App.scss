@@ -5,6 +5,11 @@
   margin: 0 5%;
   .rbc-month-view {
     min-height: 75vh;
+    .rbc-month-header {
+      .rbc-header {
+        padding: 8px 0;
+      }
+    }
   }
   .rbc-date-cell {
     padding-top: 8px;
@@ -13,6 +18,15 @@
   }
   .rbc-now {
     font-weight: normal;
+  }
+  .rbc-time-header-cell {
+    min-height: auto;
+    .rbc-header {
+      padding: 8px 0;
+    }
+  }
+  .rbc-current-time-indicator {
+    background-color: #fa5550;
   }
 }
 .month-lunar-day {
@@ -31,4 +45,20 @@
   background: #fa5550;
   color: white;
   margin-right: -1px;
+}
+.week-header-day {
+  display: inline-block;
+  margin-right: 10px;
+}
+.week-header-today {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 25px;
+  border-radius: 50px;
+  border: none;
+  font-size: 16px;
+  background: #fa5550;
+  color: white;
 }

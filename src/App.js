@@ -21,6 +21,30 @@ function App() {
   const localizer = momentLocalizer(moment);
 
   let currentDate = new Date();
+  const customWeekHeader = ({ date, label, localizer }) => {
+    const lunarDate = Lunar.fromDate(date);
+    const isCurrent = dates.eq(date, currentDate, "day");
+    if (isCurrent) {
+      return (
+        <Fragment>
+          <span className={clsx("week-header-today")}>
+            {localizer.format(date, "D")}
+          </span>
+          <span className="week-header-day">
+            {localizer.format(date, "ddd")}
+          </span>
+          <span>{lunarDate.getDayInChinese()}</span>
+        </Fragment>
+      );
+    } else {
+      return (
+        <Fragment>
+          <span className={"week-header-day"}>{label}</span>
+          <span>{lunarDate.getDayInChinese()}</span>
+        </Fragment>
+      );
+    }
+  };
   const customDateHeader = ({ label, date, drilldownView, onDrillDown }) => {
     if (!drilldownView) {
       return <span>{label}</span>;
@@ -70,6 +94,9 @@ function App() {
 
   const components = {
     toolbar: Toolbar,
+    week: {
+      header: customWeekHeader,
+    },
     month: {
       dateHeader: customDateHeader,
     },
@@ -107,8 +134,23 @@ function App() {
           year: Year,
         }}
         dayPropGetter={customDayPropGetter}
-        formats={{ dateFormat: "D" }}
-        messages={{ year: "Year" }}
+        formats={{
+          dayHeaderFormat: "YYYY年M月D日",
+          dayRangeHeaderFormat: ({ start, end }, culture, localizer) =>
+            localizer.format(start, "M月D日", culture) +
+            "-" +
+            localizer.format(end, "M月D日", culture),
+          monthHeaderFormat: "YYYY年M月",
+          dayFormat: "D ddd",
+          dateFormat: "D",
+        }}
+        messages={{
+          day: "日",
+          week: "周",
+          month: "月",
+          year: "年",
+          today: "今天",
+        }}
       />
     </div>
   );
