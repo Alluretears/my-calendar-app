@@ -49,6 +49,64 @@
   .rbc-current-time-indicator {
     background-color: #fa5550;
   }
+
+  .rbc-event {
+    margin: 1px;
+    background-color: #d1ebfd;
+    border-radius: 4px;
+    border-style: none;
+    border-left: 4px solid #35adf8;
+
+    &:active {
+      background-color: #35adf8;
+      color: #fff;
+    }
+  }
+
+  .rbc-event-label {
+    font-size: 10px;
+    color: #222;
+  }
+
+  .rbc-event-content {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    color: #222;
+    line-height: normal;
+  }
+
+  .rbc-show-more {
+    color: #929292;
+  }
+}
+
+.rbc-overlay {
+  .rbc-event {
+    margin: 1px;
+    background-color: #d1ebfd;
+    border-radius: 4px;
+    border-style: none;
+    border-left: 4px solid #35adf8;
+
+    &:active {
+      background-color: #35adf8;
+      color: #fff;
+    }
+  }
+
+  .rbc-event-label {
+    font-size: 10px;
+    color: #222;
+  }
+
+  .rbc-event-content {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    color: #222;
+    line-height: normal;
+  }
 }
 
 .month-lunar-day {
@@ -68,10 +126,12 @@
   color: white;
   margin-right: -1px;
 }
+
 .week-header-day {
   display: inline-block;
   margin-right: 10px;
 }
+
 .week-header-today {
   display: inline-block;
   width: 25px;
@@ -84,7 +144,31 @@
   background: #fa5550;
   color: white;
 }
+
 .time-gutter-header {
   color: #c9c9c9;
   font-size: 12px;
+}
+
+.modal-overlay {
+  position: "fixed";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: wheat;
+}
+
+.modal-content {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  right: 40px;
+  bottom: 40px;
+  border: 1px solid #ccc;
+  background-color: white;
+  overflow: auto;
+  border-radius: 4px;
+  outline: none;
+  padding: 20px;
 }

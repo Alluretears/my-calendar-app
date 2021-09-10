@@ -12,6 +12,7 @@
 .month-name {
   color: #fa5550;
   font-size: 20px;
+  font-weight: bold;
   text-align: left;
   padding-left: 10px;
   padding-bottom: 15px;
@@ -59,4 +60,51 @@
 .date.prev-month,
 .date.next-month {
   color: #c5c5c5;
+}
+
+.my-popup-arrow {
+  color: #e8e8e8;
+}
+
+[role="tooltip"].my-popup-content {
+  width: fit-content;
+  padding: 6px 10px;
+  border-radius: 10px;
+  background-color: #e8e8e8;
+}
+
+.my-popup-content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.my-popup-content-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background-color: #35adf8;
+  border-radius: 6px;
+  vertical-align: middle;
+}
+
+.my-popup-content-title {
+  font-size: 12px;
+  display: inline-block;
+  margin-left: 6px;
+  color: #6f6f6f;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.my-popup-content-time {
+  display: inline-block;
+  margin-left: 30px;
+  vertical-align: middle;
+  font-size: 12px;
+}
+
+.my-popup-content-empty {
+  font-size: 12px;
+  color: #6f6f6f;
 }
